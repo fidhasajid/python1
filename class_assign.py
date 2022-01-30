@@ -10,8 +10,6 @@ class Company:
 class Department(Company):
     department_name ='it department'
 
-
-
 class Employee(Department):
 
     name = ''
@@ -20,12 +18,16 @@ class Employee(Department):
     department = ''
     adress = ''
 
-    def __init__(self, name, age, gender, department, adress):
-        self.name = name
+    def __init__(self, name_, age, gender, department, adress):
+        self.name = name_
         self.age = age
         self.gender = gender
         self.department = department
         self.adress = adress
+
+    def change_department(self, department):
+        self.department =department
+
 
 
 fidha = Employee('fidha','24','female','it','jubilee road')
@@ -37,3 +39,6 @@ print(fidha.gender)
 print(fidha.department)
 print(fidha.adress)
 
+fidha.change_department('financial')
+
+print(fidha.department)
