@@ -5,6 +5,7 @@
 
 class Company:
     company_name ='fidhas company'
+    company_adress = 'jubilee road'
 
 class Department(Company):
     department_name ='it department'
