@@ -25,5 +25,11 @@ students_mark_dict = {
      "safa"    : safa,
      "fidha"   : fidha
  }
- 
+
+
 print(students_mark_dict)
+
+
+#students_mark.pop() # remove last element
+students_mark.insert(len(students_mark), 'dhsjka')
+print(students_mark)
