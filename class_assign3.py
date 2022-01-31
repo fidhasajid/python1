@@ -1,5 +1,5 @@
 """
-Create class: Student -> Class_Division, Family
+Create class: Student -> inherit Family
     Variables:
         name: string
         class_number: integer
@@ -34,3 +34,63 @@ Create class Family
         mother_name: string
         siblings: list
 """
+
+from re import sub
+
+
+class Class_division:
+    student_list = []
+    class_teacher = 'teacher'
+
+    def add_student(self, name):
+        len_stud = len(self.student_list)
+        self.student_list.insert(len_stud, name)
+    
+    def assign_class_teacher(self, name):
+        self.class_teacher = name
+    
+    def list_all_students(self):
+        for i in self.student_list:
+            print(i)
+
+class Family:
+    father_name = ''
+    mother_name = ''
+    sibling = []
+
+class Student(Family):
+    name = ''
+    class_number = 0
+    division = ''
+    gender = ''
+    marks = {}
+    sub_list = []
+    attendance = []
+
+    def add_subject(self, subject):
+        self.sub_list.insert(len(self.sub_list), subject)
+        self.marks[subject] = 0
+
+    def update_attendance(self, attended):
+        len_atten = len(self.attendance)
+        self.attendance.insert(len_atten, attended)
+
+    def change_marks(self, subject, mark):
+        self.marks[subject] = mark
+
+    def check_pass(self, subject):
+        if self.marks[subject] > 40:
+            print("pass")
+        else:
+            print("fail")
+
+
+safa = Student()
+
+print(safa.sub_list)
+
+safa.add_subject("maths")
+safa.add_subject("science")
+print(safa.sub_list)
+
+print(safa.marks)
