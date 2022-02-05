@@ -35,8 +35,6 @@ Create class Family
         siblings: list
 """
 
-from re import sub
-
 
 class Class_division:
     student_list = []
